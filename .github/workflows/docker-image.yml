@@ -47,4 +47,4 @@ jobs:
           context: .
           file: ./tools/Dockerfile
           push: true
-          tags: "${{ secrets.DOCKER_HUB_USERNAME }}/tools:latest:${{ github.event.inputs.image_version }}" 
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/tools:latest:${{ github.event.inputs.image_version }}
