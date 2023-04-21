@@ -12,7 +12,10 @@ on:
         description: 'Please specify a verison'
         required: false
         default: "latest"
-
+      tool-to-build:
+        description: 'Please specify a tool'
+        required: false
+        default: "tools"
 
 
 
