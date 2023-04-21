@@ -12,7 +12,7 @@ on:
         description: 'Please specify a verison'
         required: false
         default: "latest"
-      tool-to-build:
+      tools-to-build:
         description: 'Please specify a tool'
         required: false
         default: "tools"
@@ -57,7 +57,7 @@ jobs:
   terraform-build:
 
     runs-on: ubuntu-latest
-
+    if: github.event.inputs.tools_to_build == 'terraform'
 
 
     steps:
