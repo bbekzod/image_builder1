@@ -1,10 +1,16 @@
 name: Docker Image CI
 
+# when to run 
 on:
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  workflow_dispatch:                               # execute a button to execute from outside of repo
+    
+
+
+
 
 jobs:
 
