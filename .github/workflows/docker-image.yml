@@ -1,23 +1,25 @@
 name: Docker Image CI
 
-# when to run 
+# When to run
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
-  workflow_dispatch:                               # execute a button to execute from outside of repo
+    branches: [ "main" ]
+
+
+  workflow_dispatch:            # Creates a button to execute from outside of repo
     inputs:
       image_version:
-        description: 'Please specify a verison'
+        description: 'Please specify a version'
         required: false
         default: "latest"
-      tools-to-build:
+      tool_to_build:
         description: 'Please specify a tool'
         required: false
         default: "tools"
-
-
+  schedule:
+    - cron:  '30 7 * * sun'
 
 
 
